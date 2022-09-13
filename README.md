@@ -29,3 +29,4 @@ Dado el empeño de utilizar solo `html y css`. Reconozco que el código es mucho
 ## Acceso al proyecto:
 
 https://github.com/picigui/curriculumDevJLGS
+https://curriculum-vitae-jlgs-09-2022.netlify.app/
