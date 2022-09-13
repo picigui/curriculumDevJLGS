@@ -1,0 +1,142 @@
+@import url(./normalize.css);
+@import url(./global.css);
+@import url(./header-navbar.css);
+@import url(./footer.css);
+
+/* ---------------------- main -------------------- */
+main {
+  padding: 1rem;
+  position: relative;
+  background-color: rgb(243, 243, 236);
+}
+main h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  padding: 0;
+  margin: 0.8em 0 0.2em;
+}
+.pequeñosProyectos {
+  width: 100%;
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 4rem repeat(4, 1fr);
+  position: relative;
+  flex-direction: column;
+  justify-content: left;
+  grid-row-gap: 0.5rem;
+}
+.imagen-y-descripcion {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  flex-direction: column-reverse;
+  flex-wrap: wrap-reverse;
+  border-radius: 1.5%/1.5%;
+  border: 2px solid rgb(209, 192, 235);
+}
+.h3-y-p {
+  grid-row: 1/2;
+}
+.h3-grid,
+.p-grid {
+  text-align: justify;
+  margin: 0.8rem;
+}
+.h3-grid {
+  font-size: x-large;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.p-grid {
+  color: rgb(114, 110, 110);
+  font-weight: 600;
+}
+.pequeñosProyectos picture {
+  display: flex;
+  max-width: 100%;
+  margin: 0.5rem;
+}
+.pequeñosProyectos picture img {
+  display: flex;
+  max-width: 100%;
+}
+
+.picture-image1_pequeños-proyectos,
+.picture-image3_pequeños-proyectos {
+  grid-column: 1/2;
+}
+.picture-image2_pequeños-proyectos,
+.picture-image4_pequeños-proyectos {
+  grid-column: 2/3;
+}
+
+/* ---------------------- 550px ------------------- */
+/*** a esta resolucion se ajustan algunos valores para una mejor vision ****/
+
+@media screen and (max-width: 550px) {
+  .h3-grid {
+    font-size: 20px;
+  }
+}
+
+/* ---------------------- 430px ------------------- */
+/*** a esta resolucion se ajustan algunos valores para una mejor vision ****/
+
+@media screen and (max-width: 430px) {
+  .h3-grid {
+    font-size: 16px;
+  }
+  .p-grid {
+    font-size: 12px;
+    font-weight: 600;
+  }
+}
+
+/* ---------------------- 375px ------------------- */
+/*** a esta resolucion aparece el menu hamburguesa ****/
+
+@media screen and (max-width: 375px) {
+  body {
+    min-width: 250px;
+    grid-template-rows: 16rem 1fr 8.5rem;
+  }
+  /* ---------------------- main -------------------- */
+  main {
+    padding: 0rem;
+  }
+  main h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+    padding: 0;
+    margin: 0.8em 0 0.2em;
+  }
+  .pequeñosProyectos {
+    width: 100%;
+    grid-template-rows: 4rem repeat(4, 1fr);
+    justify-content: center;
+  }
+  .imagen-y-descripcion {
+    grid-template-columns: 100%;
+    grid-template-rows: auto fill;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .picture-image2_pequeños-proyectos,
+  .picture-image4_pequeños-proyectos {
+    grid-row: 1;
+    grid-column: 1/2;
+  }
+  .h3-y-p {
+    grid-row: 2/3;
+  }
+  .h3-grid {
+    font-size: 20px;
+  }
+  .p-grid {
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
